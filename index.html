@@ -1,0 +1,170 @@
+<?php
+//index array
+$student1 = ["Ayan","ayan123@gmail.com","709732560","21"];
+echo "<pre>";
+print_r ($student1[0]);
+echo "</pre>";
+// associative array
+$student2=[
+ 'name' =>"Arman",
+ 'phone'=>"089241485845",
+ 'email'=>"arman123@gmail.com"
+];
+echo '<pre>';
+print_r($student2);
+echo '</pre>';
+
+echo $student2['name'];
+
+// Multidymantia
+$students =[
+    'name' => " Arman",
+];
+// associative array
+$students =[
+    'user1'=>[
+        'name' => 'Ayan',
+        'email' => 'ayan123@gmail.com',
+        'social_links' => [
+            'facebook' => 'www.facebook.com',
+            'twitter' => 'www.twitter.com',
+        ]
+        ],
+    [
+        'user2'=>[
+            'name' => 'Kayan',
+            'email' => 'kayan123@gmail.com',
+            'social_links' => [
+                'facebook' => 'www.facebook.com',
+            ]
+            ],
+        ]
+    ];
+[
+    'user3'=>[
+        'name' => 'arman',
+        'email' => 'arman123@gmail.com',
+        ],
+    ];
+    
+echo '<pre>';
+print_r($students);
+echo '</pre>';
+
+echo "<br>";
+echo '<pre>';
+echo ($students['user1']['name']);
+
+echo '</pre>';
+echo '<pre>';
+print_r($students['user1']['social_links']['facebook']);
+echo '</pre>';
+
+echo '<pre>';
+print_r($students['user1']['social_links']);
+echo '</pre>';
+
+$user =[
+  'name'=>'altaf hossain',
+  'email'=>'arman@ gmail.com'  
+];
+
+echo strtoupper($user['name']);
+echo "<br>";
+echo strtolower($user['name']);
+echo "<br>";
+echo "<br>";
+echo ucwords($user['email']);
+echo "<br>";
+echo "<br>";
+echo ucfirst($user['name']);
+echo "<br>";
+echo "<br>";
+echo strrev($user['name']);
+echo "<br>";
+echo "<br>";
+$bangladesh = 'how are ipui9fu78u You';
+var_dump (strpos($bangladesh,'you'));
+echo "<br>";
+echo "<br>";
+$bangladesh = 'how are ipui9fu78u You';
+var_dump (stripos($bangladesh,'you'));
+
+$captcha = 'Hello whatup';
+$url = str_replace(' ','-',$captcha);
+echo '<br>';
+echo '<br>';
+
+echo  $url;
+echo '<br>';
+$url = strtolower(str_replace(' ','-',$captcha));
+echo  $url;
+
+$title = substr($captcha,2,10).'........<a href="#">Read More</a>';
+echo '<br>';
+echo $title;
+
+$text ='                     arman123@gmail.com';
+echo '<br>';
+var_dump(trim($text));
+echo '<br>';
+echo strlen($text);
+
+echo '<br>';
+echo '<br>';
+$text= 41214252;
+
+echo sha1($text);
+echo '<br>';
+echo md5($text);
+
+echo '<br>';
+echo password_hash($text,PASSWORD_BCRYPT);
+
+$userpassword = '41526346';
+$dbpassword = password_hash($userpassword,PASSWORD_BCRYPT);
+echo '<br>';
+echo $userpassword;
+echo '<br>';
+echo $dbpassword;
+echo '<br>';
+var_dump(password_verify('41526346',$dbpassword));
+
+echo '<br>';
+echo '<br>';
+if($userpassword==$dbpassword){
+    echo 'Success';
+}else{
+    echo 'Failed';
+};
+
+$userpassword = '41526346';
+$dbpassword = password_hash($userpassword,PASSWORD_BCRYPT);
+echo '<br>';
+echo $userpassword;
+echo '<br>';
+echo $dbpassword;
+echo '<br>';
+var_dump(password_verify('41526346',$dbpassword));
+
+echo '<br>';
+echo '<br>';
+$str = addcslashes("Bangladesh","l");
+echo $str;
+
+echo '<br>';
+$str = array('How','are','you');
+echo join("5",$str);
+
+echo '<br>';
+echo '<br>';
+$text =' Hello Ratul 1233';
+echo ltrim($text,"Ratul");
+
+echo '<br>';
+$text ='Hello Ratul 1233';
+echo rtrim($text,"Ratul");
+
+echo '<br>';
+$s = "A";
+echo str_pad($s,20,"d");
